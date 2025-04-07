@@ -2,9 +2,9 @@
 
 ---
 
-# 🏥 Asistente de Cuidado de Ancianos
+# 🏥 Asistente de Cuidado de Adultos Mayores
 
-Este proyecto es una aplicación basada en **Streamlit** que actúa como un asistente especializado en el cuidado de adultos mayores. Utiliza la API de **Together** para integrar un modelo de IA avanzado que responde preguntas relacionadas con salud, nutrición, y bienestar para personas mayores. La aplicación está diseñada para ser amable, precisa y práctica, ofreciendo apoyo tanto a los cuidadores como a los interesados en mejorar la calidad de vida de los ancianos.
+Este proyecto es una aplicación basada en **Streamlit** que actúa como un asistente especializado en el cuidado de adultos mayores. Utiliza la API de **Together** para integrar un modelo de IA avanzado que responde preguntas relacionadas con salud, nutrición, y bienestar para personas mayores. La aplicación está diseñada para ser amable, precisa y práctica, ofreciendo apoyo tanto a los cuidadores como a los interesados en mejorar la calidad de vida de los adultos mayores.
 
 ---
 
@@ -98,5 +98,5 @@ Las contribuciones son bienvenidas. Si tienes sugerencias o encuentras problemas
 
 ---
 
-¡Gracias por usar el Asistente de Cuidado de Ancianos! 😊
+¡Gracias por usar el Asistente de Cuidado de Adultos Mayores! 😊
 # esam_chat

@@ -11,7 +11,7 @@ def get_ai_stream(messages):
             messages=[
                 {
                     "role": "system",
-                    "content": "Usted es un experto en el cuidado de ancianos, con un profundo énfasis en salud y nutrición. Su misión es proporcionar consejos especializados, información precisa y apoyo práctico a los cuidadores de ancianos. Se especializa en temas como la dieta adecuada para los mayores, el manejo de condiciones de salud comunes, el bienestar emocional de los ancianos, y la implementación de rutinas de ejercicio seguras y efectivas. Si recibe una pregunta fuera de estos temas, por favor indique amablemente que no puede ayudar con ese tema y ofrezca a orientar al usuario hacia recursos o temas relevantes en su área de experticia. Si el usuario pregunta algo que no está claro, sientase libre de pedir aclaraciones para proporcionar una respuesta más precisa y útil. Su enfoque debe ser amable, compasivo y paciente, reflejando una profunda preocupación por el bienestar de los ancianos y aquellos que los cuidan.",
+                    "content": "Usted es un experto en el cuidado de adultos mayores, con un profundo énfasis en salud y nutrición. Su misión es proporcionar consejos especializados, información precisa y apoyo práctico a los cuidadores de adultos mayores. Se especializa en temas como la dieta adecuada para los mayores, el manejo de condiciones de salud comunes, el bienestar emocional de los adultos mayores, y la implementación de rutinas de ejercicio seguras y efectivas. Si recibe una pregunta fuera de estos temas, por favor indique amablemente que no puede ayudar con ese tema y ofrezca a orientar al usuario hacia recursos o temas relevantes en su área de experticia. Si el usuario pregunta algo que no está claro, sientase libre de pedir aclaraciones para proporcionar una respuesta más precisa y útil. Su enfoque debe ser amable, compasivo y paciente, reflejando una profunda preocupación por el bienestar de los adultos mayores y aquellos que los cuidan.",
                 },
             ]
             + messages,
@@ -29,10 +29,12 @@ def stream_view(stream):
 
 def main():
     # Configure the page
-    st.set_page_config(page_title="Asistente de Cuidado de Ancianos", page_icon="👵")
+    st.set_page_config(
+        page_title="Asistente de Cuidado de Adultos Mayores", page_icon="👵"
+    )
 
     # Title
-    st.title("🏥 Experto en Cuidado de Ancianos")
+    st.title("🏥 Experto en Cuidado de Adultos Mayores")
 
     # Initialize chat history
     if "messages" not in st.session_state:
@@ -45,7 +47,7 @@ def main():
 
     # User input
     if prompt := st.chat_input(
-        "¿Cómo puedo ayudarte con el cuidado de personas mayores?"
+        "¿Cómo puedo ayudarte con el cuidado de adultos mayores?"
     ):
         # Append user message to chat history
         st.session_state.messages.append({"role": "user", "content": prompt})
