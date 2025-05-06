@@ -7,7 +7,7 @@ def get_ai_stream(messages):
     try:
         client = Together(api_key=os.getenv("TOGETHER_APIKEY"))
         stream = client.chat.completions.create(
-            model="meta-llama/Llama-3-8b-chat-hf",
+            model="meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
             messages=[
                 {
                     "role": "system",
@@ -24,7 +24,24 @@ def get_ai_stream(messages):
 
 def stream_view(stream):
     for chunk in stream:
-        yield chunk.choices[0].delta.content
+        if (
+            chunk.choices
+            and len(chunk.choices) > 0
+            and chunk.choices[0].delta
+            and chunk.choices[0].delta.content is not None
+        ):
+            yield chunk.choices[0].delta.content
+        elif (
+            chunk.choices
+            and len(chunk.choices) > 0
+            and chunk.choices[0].delta
+            and chunk.choices[0].delta.content is None
+        ):
+            # If content is None, yield an empty string or handle as appropriate
+            yield ""
+        # Optionally, log or handle cases where the structure is not as expected
+        # else:
+        #     print(f"Unexpected chunk structure: {chunk}")  # Or use logging
 
 
 def main():
